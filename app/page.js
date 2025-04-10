@@ -1,95 +1,121 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from "react";
+import "./mainpage.css";
 
-export default function Home() {
+const TravelEase = () => {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="travelsease">
+      {/* Header */}
+      <header className="header">
+        <div className="logo-search">
+          <div className="logo">logo</div>
+          <span className="title">TravelEase</span>
+        </div>
+        <div className="nav-buttons">
+          <button>PLAN A TRIP</button>
+          <button>TRAVEL RECS</button>
+          <button>ACCOUNT</button>
+        </div>
+      </header>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      {/* Explore Section */}
+      <main className="main-content">
+        <h2 className="section-title">EXPLORE CHEAP DEALS</h2>
+
+        {[
+          {
+            title: "FLIGHTS",
+            items: [
+              { place: "New York", date: "Tue, Mar 17", price: "from $70" },
+              { place: "Boston", date: "Tue, Mar 17", price: "from $83" },
+              { place: "Florida", date: "Thu, Mar 19", price: "from $94" },
+            ],
+          },
+          {
+            title: "ACCOMMODATIONS",
+            items: [
+              {
+                place: "New York",
+                detail: "Hotels, hostels, & more",
+                price: "from $10",
+              },
+              {
+                place: "California",
+                detail: "Hotels, hostels, & more",
+                price: "from $15",
+              },
+              {
+                place: "Chicago",
+                detail: "Hotels, hostels, & more",
+                price: "from $12",
+              },
+            ],
+          },
+          {
+            title: "ACTIVITIES",
+            items: [
+              {
+                place: "New York",
+                detail: "Museums, Tours, & more",
+                price: "from $0",
+              },
+              {
+                place: "Florida",
+                detail: "Beaches, amusement parks, & more",
+                price: "from $0",
+              },
+              {
+                place: "Utah",
+                detail: "National parks, hot springs, & more",
+                price: "from $0",
+              },
+            ],
+          },
+        ].map((section) => (
+          <div className="category" key={section.title}>
+            <h3 className="category-title">{section.title}</h3>
+            <div className="card-grid">
+              {section.items.map((item, idx) => (
+                <div key={idx} className="card">
+                  <div className="image-placeholder"></div>
+                  <h4 className="place-name">{item.place}</h4>
+                  {item.date && <p className="detail-text">{item.date}</p>}
+                  {item.detail && <p className="detail-text">{item.detail}</p>}
+                  <p className="price-text">{item.price}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {/* Guides Section */}
+        <div className="category">
+          <h3 className="category-title">GUIDES</h3>
+          <div className="card-grid four-cols">
+            {[
+              "4 Packed Days in Hawaii",
+              "Creating a Travel Budget",
+              "Saving Money in Paris",
+              "How to Find Cheap Eats",
+            ].map((title, idx) => (
+              <div key={idx} className="card">
+                <div className="image-placeholder"></div>
+                <p className="guide-title">{title}</p>
+                <p className="author-name">Author name</p>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="footer">
+        <span>HELP</span>
+        <span>COUNTRY/CURRENCY</span>
+        <span>SAVED TRIPS</span>
+        <span>LOG IN</span>
       </footer>
     </div>
   );
-}
+};
+
+export default TravelEase;
