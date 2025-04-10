@@ -1,17 +1,41 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./mainpage.css";
+import { FaPlane, FaHome } from "react-icons/fa";
+import { GiPalmTree } from "react-icons/gi"; 
 
 const TravelEase = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
+
   return (
     <div className="travelsease">
-      {/* Header */}
       <header className="header">
         <div className="logo-search">
           <div className="logo">logo</div>
           <span className="title">TravelEase</span>
         </div>
         <div className="nav-buttons">
-          <button>PLAN A TRIP</button>
+          <div className="dropdown-container">
+            <button onClick={() => setShowDropdown(!showDropdown)}>
+              PLAN A TRIP
+            </button>
+            {showDropdown && (
+              <div className="dropdown-menu">
+                <div className="dropdown-item">
+                  <span>FLIGHTS</span>
+                  <FaPlane />
+                </div>
+                <div className="dropdown-item">
+                  <span>STAYS</span>
+                  <FaHome />
+                </div>
+                <div className="dropdown-item">
+                  <span>ACTIVITIES</span>
+                  <GiPalmTree />
+                </div>
+              </div>
+            )}
+          </div>
           <button>TRAVEL RECS</button>
           <button>ACCOUNT</button>
         </div>
@@ -31,7 +55,7 @@ const TravelEase = () => {
             ],
           },
           {
-            title: "ACCOMMODATIONS",
+            title: "STAYS",
             items: [
               {
                 place: "New York",
@@ -109,10 +133,10 @@ const TravelEase = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <span>HELP</span>
-        <span>COUNTRY/CURRENCY</span>
-        <span>SAVED TRIPS</span>
-        <span>LOG IN</span>
+        <button className="footer-button">HELP</button>
+        <button className="footer-button">COUNTRY/CURRENCY</button>
+        <button className="footer-button">SAVED TRIPS</button>
+        <button className="footer-button">LOG IN</button>
       </footer>
     </div>
   );
