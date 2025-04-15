@@ -4,11 +4,12 @@
 
 /* Header */
 .header {
-  background-color: #c6f6d5;
+  background-color: #b3cb97;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100px;
 }
 
 .logo-search {
@@ -32,14 +33,6 @@
 .title {
   font-size: 1.25rem;
   font-weight: 600;
-}
-
-.search-bar {
-  margin-left: 1rem;
-  padding: 0.25rem 1rem;
-  border-radius: 9999px;
-  border: 1px solid #ccc;
-  width: 16rem;
 }
 
 .nav-buttons button {
@@ -105,7 +98,7 @@
 }
 
 .price-text {
-  color: #38a169;
+  color: #295c0f;
   font-size: 0.875rem;
   font-weight: bold;
 }
@@ -122,11 +115,13 @@
 
 /* Footer */
 .footer {
-  background-color: #c6f6d5;
+  background-color: #b3cb97;
   padding: 1rem 2.5rem;
   font-size: 0.875rem;
   font-weight: 500;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-top: 2.5rem;
+  height: 89px;
 }

@@ -13,7 +13,6 @@ const TravelEase = () => {
         <div className="nav-buttons">
           <button>PLAN A TRIP</button>
           <button>TRAVEL RECS</button>
-          <button>ACCOUNT</button>
         </div>
       </header>
 
@@ -86,25 +85,6 @@ const TravelEase = () => {
             </div>
           </div>
         ))}
-
-        {/* Guides Section */}
-        <div className="category">
-          <h3 className="category-title">GUIDES</h3>
-          <div className="card-grid four-cols">
-            {[
-              "4 Packed Days in Hawaii",
-              "Creating a Travel Budget",
-              "Saving Money in Paris",
-              "How to Find Cheap Eats",
-            ].map((title, idx) => (
-              <div key={idx} className="card">
-                <div className="image-placeholder"></div>
-                <p className="guide-title">{title}</p>
-                <p className="author-name">Author name</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </main>
 
       {/* Footer */}
