@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import "./mainpage.css";
-import { FaPlane, FaHome } from "react-icons/fa";
-import { GiPalmTree } from "react-icons/gi"; 
+// import { FaPlane, FaHome } from "react-icons/fa";
+// import { GiPalmTree } from "react-icons/gi";
 
 const TravelEase = () => {
   const [showDropdown, setShowDropdown] = useState(false);
