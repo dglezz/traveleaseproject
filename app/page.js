@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import "./mainpage.css";
 import { FaPlane, FaHome } from "react-icons/fa";
 import { GiPalmTree } from "react-icons/gi";
-import Link from "next/link";
 
 const TravelEase = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
+
   return (
     <div className="travelsease">
       <header className="header">
@@ -14,26 +15,28 @@ const TravelEase = () => {
           <span className="title">TravelEase</span>
         </div>
         <div className="nav-buttons">
-          <Link href="/flights" className="nav-button">
-            <button className="white-button">
-              <FaPlane />
-              FLIGHTS
+          <div className="dropdown-container">
+            <button onClick={() => setShowDropdown(!showDropdown)}>
+              PLAN A TRIP
             </button>
-          </Link>
-          <Link href="/stays" className="nav-button">
-            <button className="white-button">
-              <FaHome />
-              STAYS
-            </button>
-          </Link>
-          <Link href="/activities" className="nav-button">
-            <button className="white-button">
-              <GiPalmTree />
-              ACTIVITIES
-            </button>
-          </Link>
-
-          <button className="white-button">TRAVEL RECS</button>
+            {showDropdown && (
+              <div className="dropdown-menu">
+                <div className="dropdown-item">
+                  <span>FLIGHTS</span>
+                  <FaPlane />
+                </div>
+                <div className="dropdown-item">
+                  <span>STAYS</span>
+                  <FaHome />
+                </div>
+                <div className="dropdown-item">
+                  <span>ACTIVITIES</span>
+                  <GiPalmTree />
+                </div>
+              </div>
+            )}
+          </div>
+          <button>TRAVEL RECS</button>
         </div>
       </header>
 
@@ -112,6 +115,8 @@ const TravelEase = () => {
       <footer className="footer">
         <button className="footer-button">HELP</button>
         <button className="footer-button">COUNTRY/CURRENCY</button>
+        <button className="footer-button">SAVED TRIPS</button>
+        <button className="footer-button">LOG IN</button>
       </footer>
     </div>
   );
