@@ -7,6 +7,7 @@ import { GiPalmTree } from "react-icons/gi";
 const TravelEase = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
+  // checking if it works
   return (
     <div className="travelsease">
       <header className="header">
