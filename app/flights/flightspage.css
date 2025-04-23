@@ -232,9 +232,8 @@
   border: none;
 }
 
-
 .sort-buttons button:hover {
-  background-color: #889f6c;   
+  background-color: #889f6c;
 }
 
 .sort-buttons {
@@ -245,21 +244,21 @@
   font-weight: bold;
 }
 
-.sort-buttons button {  
-  padding: 8px 16px;    
-  background-color: #b3cb97;  
-  margin-right: 10px;           
+.sort-buttons button {
+  padding: 8px 16px;
+  background-color: #b3cb97;
+  margin-right: 10px;
   font-size: 16px;
-  border: 1px solid black;     
+  border: 1px solid black;
   border-radius: 1rem;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.2s ease, color 0.2s ease; 
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .sort-buttons button.active {
   outline: black;
-  border: 2px solid darkgreen;     
+  border: 2px solid darkgreen;
 }
 
 /* Filter Sidebar */
@@ -309,7 +308,7 @@
   background-color: #edf1e4;
   padding: 1rem 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
@@ -376,7 +375,7 @@
   background-color: white;
   padding: 0.75rem 1rem;
   border-radius: 0.75rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   min-width: 180px;
   margin-top: 0.25rem;
 }
@@ -395,8 +394,7 @@
 .search-button:hover {
   background-color: #1f450a;
   transform: scale(1.05);
-} 
-
+}
 
 .react-datepicker__input-container input {
   width: 100%;
@@ -408,8 +406,8 @@
   text-align: center;
 }
 
-
-.travelers-dropdown, .class-dropdown {
+.travelers-dropdown,
+.class-dropdown {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
@@ -421,38 +419,35 @@
 }
 
 .filter-group input[type="checkbox"] {
-  -webkit-appearance: none;  
-  -moz-appearance: none;    
-  appearance: none;         
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 20px;
   height: 20px;
   border: 2px solid #ccc;
   border-radius: 4px;
   position: relative;
-  background-color: #fff;   
+  background-color: #fff;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
-
 .filter-group input[type="checkbox"]:checked::before {
-  content: ''; 
+  content: "";
   position: absolute;
   top: 3px;
   left: 3px;
   width: 10px;
   height: 10px;
-  background-color: darkgreen; 
-  border-radius: 2px;      
+  background-color: darkgreen;
+  border-radius: 2px;
   display: block;
 }
 
 .filter-group input[type="checkbox"]:checked {
-  border-color: #4CAF50;  
+  border-color: #4caf50;
 }
 
 .filter-group input[type="checkbox"]:hover {
-  border-color: #4CAF50; 
+  border-color: #4caf50;
 }
-
-

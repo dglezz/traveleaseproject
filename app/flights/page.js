@@ -1,34 +1,36 @@
-'use client';
-import 'react-datepicker/dist/react-datepicker.css';
+"use client";
+import "react-datepicker/dist/react-datepicker.css";
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
-import './flightspage.css';
+import "./flightspage.css";
 import { FaPlane, FaHome } from "react-icons/fa";
 import { GiPalmTree } from "react-icons/gi";
-import dynamic from 'next/dynamic';
-import DatePicker from 'react-datepicker';
+import dynamic from "next/dynamic";
+import DatePicker from "react-datepicker";
 
-const SelectNoSSR = dynamic(() => import('/components/SelectNoSSR'), { ssr: false });
+const SelectNoSSR = dynamic(() => import("/components/SelectNoSSR"), {
+  ssr: false,
+});
 
 const airportOptions = [
   { value: "JFK", label: "New York, NY (JFK)" },
   { value: "LGA", label: "New York, NY (LGA)" },
   { value: "BOS", label: "Boston, MA (BOS)" },
   { value: "SFO", label: "San Francisco, CA (SFO)" },
-  { value: "ORD", label: "Chicago, IL (ORD)" }
+  { value: "ORD", label: "Chicago, IL (ORD)" },
 ];
 
 const FlightsPage = () => {
   const [departDate, setDepartDate] = useState(null);
   const [returnDate, setReturnDate] = useState(null);
-  const [numTravelers, setNumTravelers] = useState(1); 
+  const [numTravelers, setNumTravelers] = useState(1);
   const [selectedClass, setSelectedClass] = useState("Economy");
   const [filters, setFilters] = useState({
     direct: false,
     stops: false,
     airlines: false,
-    baggage: false
+    baggage: false,
   });
 
   const [activeSort, setActiveSort] = useState("CHEAPEST");
@@ -46,7 +48,7 @@ const FlightsPage = () => {
 
   const handleReturnChange = (date) => {
     if (date < departDate) {
-      alert('Return date cannot be before departure. Adjusting return date.');
+      alert("Return date cannot be before departure. Adjusting return date.");
       setReturnDate(departDate);
     } else {
       setReturnDate(date);
@@ -65,7 +67,9 @@ const FlightsPage = () => {
       <header className="header">
         <div className="logo-search">
           <div className="logo">logo</div>
-          <Link href="/" className="title">TravelEase</Link>
+          <Link href="/" className="title">
+            TravelEase
+          </Link>
         </div>
         <div className="nav-buttons">
           <Link href="/flights" className="nav-button">
@@ -102,20 +106,20 @@ const FlightsPage = () => {
                 styles={{
                   placeholder: (base) => ({
                     ...base,
-                    fontWeight: 'normal'
+                    fontWeight: "normal",
                   }),
                   option: (provided) => ({
                     ...provided,
-                    fontWeight: 'normal' 
+                    fontWeight: "normal",
                   }),
                   singleValue: (provided) => ({
                     ...provided,
-                    fontWeight: 'normal' 
+                    fontWeight: "normal",
                   }),
                   input: (provided) => ({
                     ...provided,
-                    fontWeight: 'normal' 
-                  })
+                    fontWeight: "normal",
+                  }),
                 }}
               />
             </div>
@@ -129,20 +133,20 @@ const FlightsPage = () => {
                 styles={{
                   placeholder: (base) => ({
                     ...base,
-                    fontWeight: 'normal'
+                    fontWeight: "normal",
                   }),
                   option: (provided) => ({
                     ...provided,
-                    fontWeight: 'normal' 
+                    fontWeight: "normal",
                   }),
                   singleValue: (provided) => ({
                     ...provided,
-                    fontWeight: 'normal' 
+                    fontWeight: "normal",
                   }),
                   input: (provided) => ({
                     ...provided,
-                    fontWeight: 'normal'
-                  })
+                    fontWeight: "normal",
+                  }),
                 }}
               />
             </div>
@@ -180,7 +184,7 @@ const FlightsPage = () => {
               >
                 {[...Array(10).keys()].map((i) => (
                   <option key={i} value={i + 1}>
-                    {i + 1} Traveler{(i + 1) > 1 ? 's' : ''}
+                    {i + 1} Traveler{i + 1 > 1 ? "s" : ""}
                   </option>
                 ))}
               </select>
@@ -207,10 +211,38 @@ const FlightsPage = () => {
           <aside className="filter-sidebar">
             <h3>FILTER BY:</h3>
             <div className="filter-group">
-              <label><input type="checkbox" checked={filters.direct} onChange={() => handleFilterChange('direct')} /> Direct</label>
-              <label><input type="checkbox" checked={filters.stops} onChange={() => handleFilterChange('stops')} /> Stops</label>
-              <label><input type="checkbox" checked={filters.airlines} onChange={() => handleFilterChange('airlines')} /> Airlines</label>
-              <label><input type="checkbox" checked={filters.baggage} onChange={() => handleFilterChange('baggage')} /> Baggage</label>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={filters.direct}
+                  onChange={() => handleFilterChange("direct")}
+                />{" "}
+                Direct
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={filters.stops}
+                  onChange={() => handleFilterChange("stops")}
+                />{" "}
+                Stops
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={filters.airlines}
+                  onChange={() => handleFilterChange("airlines")}
+                />{" "}
+                Airlines
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={filters.baggage}
+                  onChange={() => handleFilterChange("baggage")}
+                />{" "}
+                Baggage
+              </label>
             </div>
           </aside>
 
@@ -218,19 +250,25 @@ const FlightsPage = () => {
             <div className="sort-buttons">
               <span>SORT BY:</span>
               <button
-                className={`sort-button ${activeSort === "CHEAPEST" ? "active" : ""}`}
+                className={`sort-button ${
+                  activeSort === "CHEAPEST" ? "active" : ""
+                }`}
                 onClick={() => handleSortChange("CHEAPEST")}
               >
                 CHEAPEST
               </button>
               <button
-                className={`sort-button ${activeSort === "BEST" ? "active" : ""}`}
+                className={`sort-button ${
+                  activeSort === "BEST" ? "active" : ""
+                }`}
                 onClick={() => handleSortChange("BEST")}
               >
                 BEST
               </button>
               <button
-                className={`sort-button ${activeSort === "FASTEST" ? "active" : ""}`}
+                className={`sort-button ${
+                  activeSort === "FASTEST" ? "active" : ""
+                }`}
                 onClick={() => handleSortChange("FASTEST")}
               >
                 FASTEST
@@ -248,7 +286,7 @@ const FlightsPage = () => {
                   from: "JFK",
                   to: "BOS",
                   priceEach: "$330",
-                  total: "$660"
+                  total: "$660",
                 },
                 {
                   airline: "Southwest Airlines",
@@ -259,7 +297,7 @@ const FlightsPage = () => {
                   from: "LGA",
                   to: "BOS",
                   priceEach: "$348",
-                  total: "$696"
+                  total: "$696",
                 },
                 {
                   airline: "United Airlines",
@@ -270,13 +308,15 @@ const FlightsPage = () => {
                   from: "JFK",
                   to: "BOS",
                   priceEach: "$310",
-                  total: "$620"
-                }
+                  total: "$620",
+                },
               ].map((flight, idx) => (
                 <div key={idx} className="flight-card">
                   <div>
                     <div className="airline">{flight.airline}</div>
-                    <div className="duration">{flight.duration} | {flight.from} → {flight.to}</div>
+                    <div className="duration">
+                      {flight.duration} | {flight.from} → {flight.to}
+                    </div>
                   </div>
                   <div className="time-info">
                     <div>{flight.time}</div>
@@ -294,16 +334,15 @@ const FlightsPage = () => {
           </div>
         </div>
       </main>
-    {/* Footer */}
-    <footer className="footer">
+      {/* Footer */}
+      <footer className="footer">
         <button className="footer-button">HELP</button>
         <button className="footer-button">COUNTRY/CURRENCY</button>
-        <button className="footer-button">SAVED TRIPS</button>
-        <button className="footer-button">LOG IN</button>
+        {/* <button className="footer-button">SAVED TRIPS</button>
+        <button className="footer-button">LOG IN</button> */}
       </footer>
-    </div>   
+    </div>
   );
 };
-
 
 export default FlightsPage;
