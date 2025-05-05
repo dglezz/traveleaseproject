@@ -16,10 +16,10 @@ const TravelEase = () => {
         </div>
         <div className="nav-buttons">
           <Link href="/flights" className="nav-button">
-            <button className="white-button">
-              <FaPlane />
-              FLIGHTS
-            </button>
+          <button className="white-button">
+          <FaPlane />
+          FLIGHTS
+        </button>
           </Link>
           <Link href="/stays" className="nav-button">
             <button className="white-button">
@@ -33,8 +33,9 @@ const TravelEase = () => {
               ACTIVITIES
             </button>
           </Link>
-
+          <Link href="/travelrecs" className="nav-button">
           <button className="white-button">TRAVEL RECS</button>
+          </Link>
         </div>
       </header>
 

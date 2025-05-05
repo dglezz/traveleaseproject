@@ -40,7 +40,9 @@ const ActivitiesPage = () => {
               ACTIVITIES
             </button>
           </Link>
+          <Link href="/travelrecs" className="nav-button">
           <button className="white-button">TRAVEL RECS</button>
+          </Link>
         </div>
       </header>
 

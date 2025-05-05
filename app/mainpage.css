@@ -127,6 +127,19 @@
   height: 70px;
 }
 
+.white-button {
+  background-color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
 .footer-button {
   background: none;
   border: none;
