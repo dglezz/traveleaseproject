@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FaPlane, FaHome } from "react-icons/fa";
 import { GiPalmTree } from "react-icons/gi";
 import DatePicker from "react-datepicker";
+import dynamic from "next/dynamic";
 
 const ActivitiesPage = () => {
   const [location, setLocation] = useState("Punta Cana, Dominican Republic");

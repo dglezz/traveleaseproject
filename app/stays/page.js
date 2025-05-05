@@ -16,6 +16,7 @@ export default function StaysPage() {
       {/* Header */}
       <header className="header">
         <div className="logo-search">
+          <div className="logo">logo</div>
           <Link href="/" className="title">
             TravelEase
           </Link>
