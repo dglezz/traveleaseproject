@@ -6,6 +6,7 @@ import { GiPalmTree } from "react-icons/gi";
 import "./stayspage.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Image from "next/image";
 
 export default function StaysPage() {
   const [checkInDate, setCheckInDate] = useState(null);
@@ -48,7 +49,14 @@ export default function StaysPage() {
       {/* Header */}
       <header className="header">
         <div className="logo-search">
-          <div className="logo">logo</div>
+          <div className="logo">
+            <Image
+              src="/images/logo.png"
+              alt="TravelEase Logo"
+              width={80}
+              height={80}
+            />
+          </div>
           <Link href="/" className="title">
             TravelEase
           </Link>
@@ -80,7 +88,7 @@ export default function StaysPage() {
 
       {/* Search Bar */}
       <main className="stays-page-content">
-        <h2 className="section-title">PLAN YOUR STAY</h2>
+        {/* <h2 className="section-title">PLAN YOUR STAY</h2> */}
         <section className="search-bar">
           <div className="search-inputs">
             <div className="input-group">

@@ -66,7 +66,14 @@ const FlightsPage = () => {
     <div className="travelsease">
       <header className="header">
         <div className="logo-search">
-          <div className="logo">logo</div>
+          <div className="logo">
+            <Image
+              src="/images/logo.png"
+              alt="TravelEase Logo"
+              width={80}
+              height={80}
+            />
+          </div>
           <Link href="/" className="title">
             TravelEase
           </Link>
@@ -91,7 +98,7 @@ const FlightsPage = () => {
             </button>
           </Link>
           <Link href="/travelrecs" className="nav-button">
-          <button className="white-button">TRAVEL RECS</button>
+            <button className="white-button">TRAVEL RECS</button>
           </Link>
         </div>
       </header>

@@ -14,7 +14,7 @@
   gap: 0.5rem;
 }
 
-.logo {
+/* .logo {
   background-color: white;
   width: 40px;
   height: 40px;
@@ -24,6 +24,13 @@
   align-items: center;
   font-weight: bold;
   font-size: 0.75rem;
+} */
+
+.logo {
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .white-button {
