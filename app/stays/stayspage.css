@@ -228,8 +228,10 @@
 }
 
 .stay-card img {
-  width: 33%;
+  width: 50%;
+  height: 180px; /* or any consistent height */
   object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 .stay-info {

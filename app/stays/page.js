@@ -12,6 +12,37 @@ export default function StaysPage() {
   const [checkOutDate, setCheckOutDate] = useState(null);
   const [travelers, setTravelers] = useState(1);
 
+  const stayData = [
+    {
+      title: "Paradisus Gran Cana - All Suites - All Inclusive",
+      location: "Bávaro",
+      rating: 8.4,
+      price: "$319",
+      image: "/images/paradisus.jpeg",
+    },
+    {
+      title: "Bahia Principe Luxury Ambar",
+      location: "Punta Cana",
+      rating: 8.9,
+      price: "$275",
+      image: "/images/bahiaprincipe.jpeg",
+    },
+    {
+      title: "Barceló Bávaro Palace",
+      location: "Bávaro Beach",
+      rating: 9.1,
+      price: "$290",
+      image: "/images/barcelo.jpg",
+    },
+    {
+      title: "Dreams Royal Beach Punta Cana",
+      location: "Punta Cana",
+      rating: 8.7,
+      price: "$305",
+      image: "/images/dreams.jpeg",
+    },
+  ];
+
   return (
     <div className="stays-page">
       {/* Header */}
@@ -46,6 +77,8 @@ export default function StaysPage() {
           </Link>
         </div>
       </header>
+
+      {/* Search Bar */}
       <main className="stays-page-content">
         <h2 className="section-title">PLAN YOUR STAY</h2>
         <section className="search-bar">
@@ -103,6 +136,7 @@ export default function StaysPage() {
         </section>
       </main>
 
+      {/* Main Content */}
       <div className="main-content">
         {/* Filters */}
         <div className="filters">
@@ -119,18 +153,18 @@ export default function StaysPage() {
 
         {/* Stay Listings */}
         <div className="stay-listings">
-          {[1, 2, 3, 4].map((_, i) => (
+          {stayData.map((stay, i) => (
             <div key={i} className="stay-card">
-              <img src="https://via.placeholder.com/200x150" alt="hotel" />
+              <img src={stay.image} alt={stay.title} />
               <div className="stay-info">
                 <div>
-                  <h3>Paradisus Gran Cana - All Suites - All Inclusive</h3>
-                  <p className="location">Bávaro</p>
+                  <h3>{stay.title}</h3>
+                  <p className="location">{stay.location}</p>
                 </div>
                 <div className="rating-price">
-                  <span className="rating">8.4</span>
+                  <span className="rating">{stay.rating}</span>
                   <div className="price-details">
-                    <p className="price">$319</p>
+                    <p className="price">{stay.price}</p>
                     <p className="note">includes taxes & fees</p>
                   </div>
                 </div>
