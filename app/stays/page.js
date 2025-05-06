@@ -8,8 +8,9 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function StaysPage() {
-  const [startDate, setStartDate] = useState(new Date());
-  const [travelers, setTravelers] = useState("1");
+  const [checkInDate, setCheckInDate] = useState(null);
+  const [checkOutDate, setCheckOutDate] = useState(null);
+  const [travelers, setTravelers] = useState(1);
 
   return (
     <div className="stays-page">
@@ -41,37 +42,66 @@ export default function StaysPage() {
             </button>
           </Link>
           <Link href="/travelrecs" className="nav-button">
-          <button className="white-button">TRAVEL RECS</button>
+            <button className="white-button">TRAVEL RECS</button>
           </Link>
         </div>
       </header>
+      <main className="stays-page-content">
+        <h2 className="section-title">PLAN YOUR STAY</h2>
+        <section className="search-bar">
+          <div className="search-inputs">
+            <div className="input-group">
+              <label>Destination</label>
+              <input
+                type="text"
+                placeholder="City, state, or region"
+                className="input-box"
+              />
+            </div>
 
-      {/* Search Bar */}
-      <h1 className="page-title">Plan your Stay</h1>
-      <div className="search-bar">
-        <input placeholder="Going to" />
+            <div className="input-group">
+              <label>Check-in</label>
+              <DatePicker
+                selected={checkInDate}
+                onChange={(date) => setCheckInDate(date)}
+                minDate={new Date()}
+                dateFormat="MM/dd/yyyy"
+                className="input-box"
+                placeholderText="Choose date"
+              />
+            </div>
 
-        <DatePicker
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-          className="datepicker"
-          placeholderText="Select date"
-        />
+            <div className="input-group">
+              <label>Check-out</label>
+              <DatePicker
+                selected={checkOutDate}
+                onChange={(date) => setCheckOutDate(date)}
+                minDate={checkInDate}
+                dateFormat="MM/dd/yyyy"
+                className="input-box"
+                placeholderText="Choose date"
+              />
+            </div>
 
-        <select
-          className="traveler-dropdown"
-          value={travelers}
-          onChange={(e) => setTravelers(e.target.value)}
-        >
-          <option value="1">1 person</option>
-          <option value="2">2 people</option>
-          <option value="3">3 people</option>
-          <option value="4">4 people</option>
-          <option value="5+">5+ people</option>
-        </select>
+            <div className="input-group">
+              <label>Travelers</label>
+              <select
+                value={travelers}
+                onChange={(e) => setTravelers(Number(e.target.value))}
+                className="travelers-dropdown"
+              >
+                {[...Array(10).keys()].map((i) => (
+                  <option key={i} value={i + 1}>
+                    {i + 1} Traveler{i + 1 > 1 ? "s" : ""}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-        <button className="search-button">Search</button>
-      </div>
+            <button className="search-button">Search</button>
+          </div>
+        </section>
+      </main>
 
       <div className="main-content">
         {/* Filters */}
@@ -112,8 +142,8 @@ export default function StaysPage() {
 
       {/* Footer */}
       <footer className="footer">
-        <span>HELP</span>
-        <span>COUNTRY/CURRENCY</span>
+        <button className="footer-button">HELP</button>
+        <button className="footer-button">COUNTRY/CURRENCY</button>
       </footer>
     </div>
   );

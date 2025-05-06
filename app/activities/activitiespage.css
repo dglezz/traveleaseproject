@@ -133,6 +133,18 @@
 }
 
 /* Footer */
+.footer {
+  background-color: #b3cb97;
+  padding: 1rem 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  height: 70px;
+}
+
 .footer-button {
   background: none;
   border: none;

@@ -44,6 +44,15 @@
   display: flex;
   gap: 1rem;
 }
+.nav-buttons button {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: black;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
 
 .white-button {
   background-color: white;
@@ -77,6 +86,83 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+.input-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.input-box {
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  margin-top: 0.25rem;
+}
+
+.search-button {
+  background-color: #295c0f;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar {
+  margin-top: 2rem;
+  background-color: #f0f4ec;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.search-button:hover {
+  background-color: #1f450a;
+  transform: scale(1.05);
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+.section-title {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.travelers-dropdown,
+.class-dropdown {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: black;
+  background-color: white;
+  text-align: center;
+}
+
 .search-bar input {
   flex: 1;
   padding: 0.5rem;
@@ -85,10 +171,14 @@
 }
 
 .search-button {
-  background: black;
+  background-color: #295c0f;
   color: white;
-  padding: 0.5rem 1.25rem;
-  border-radius: 4px;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .main-content {
@@ -186,10 +276,33 @@
 
 .footer {
   background-color: #b3cb97;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
+  padding: 1rem 2.5rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  height: 70px;
+}
+
+.footer-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  border-radius: 9999px;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.footer-button:hover {
+  background-color: white;
+  transform: scale(1.1);
 }
