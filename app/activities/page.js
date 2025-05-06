@@ -106,13 +106,13 @@ const ActivitiesPage = () => {
               title: "Boat tour",
               duration: "5 hours",
               price: "$115",
-              img: "/images/boat.jpg",
+              img: "/images/boattour.jpg",
             },
             {
               title: "Coco Bongo",
               duration: "3 hours",
               price: "$75",
-              img: "/images/coco.jpg",
+              img: "/images/cocobongo.jpg",
             },
           ].map((a, i) => (
             <div className="activity-card" key={i}>
@@ -133,34 +133,35 @@ const ActivitiesPage = () => {
         <div className="activity-grid">
           {[
             {
-              title: "Caribbean Dune Buggy",
+              title: "Punta Cana Beach Horseback Riding",
               duration: "3 hours",
-              price: "$48",
-              img: "/images/buggy.jpg",
+              price: "$88",
+              img: "/images/hourseback.jpg",
             },
             {
-              title: "Scape park",
-              duration: "2 hours",
+              title: "Snorkeling Catamaran Tour",
+              duration: "4 hours",
               price: "$100",
-              img: "/images/scape.jpg",
+              img: "/images/snorkeling.jpg",
             },
             {
-              title: "Saona Island",
+              title: "MonkeyLand and Zipline",
               duration: "5 hours",
               price: "$120",
-              img: "/images/saona.jpg",
+              img: "/images/monkeyland.jpg",
             },
             {
-              title: "Boat tour",
+              title:
+                "3in1: Los Haitises N. Park + Yanigua Waterfall + Montaña Redonda",
               duration: "5 hours",
-              price: "$115",
-              img: "/images/boat.jpg",
+              price: "$145",
+              img: "/images/haitises.jpg",
             },
             {
-              title: "Coco Bongo",
+              title: "Parasailing",
               duration: "3 hours",
-              price: "$75",
-              img: "/images/coco.jpg",
+              price: "$95",
+              img: "/images/parasailing.jpg",
             },
           ].map((a, i) => (
             <div className="activity-card" key={i}>
@@ -176,9 +177,9 @@ const ActivitiesPage = () => {
       </div>
 
       {/* Footer */}
-      <footer className="activities-footer">
-        <span>HELP</span>
-        <span>COUNTRY/CURRENCY</span>
+      <footer className="footer">
+        <button className="footer-button">HELP</button>
+        <button className="footer-button">COUNTRY/CURRENCY</button>
       </footer>
     </div>
   );
