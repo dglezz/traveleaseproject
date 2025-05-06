@@ -42,7 +42,7 @@ const ActivitiesPage = () => {
             </button>
           </Link>
           <Link href="/travelrecs" className="nav-button">
-          <button className="white-button">TRAVEL RECS</button>
+            <button className="white-button">TRAVEL RECS</button>
           </Link>
         </div>
       </header>
@@ -94,13 +94,13 @@ const ActivitiesPage = () => {
               title: "Scape park",
               duration: "2 hours",
               price: "$100",
-              img: "/images/scape.jpg",
+              img: "/images/scapepark.jpeg",
             },
             {
               title: "Saona Island",
               duration: "5 hours",
               price: "$120",
-              img: "/images/saona.jpg",
+              img: "/images/saona.webp",
             },
             {
               title: "Boat tour",
