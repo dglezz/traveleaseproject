@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TravelEase
 
-## Getting Started
+TravelEase is a travel planning platform designed to help students and budget-conscious users explore trips in a simple, accessible, and organized way.
 
-First, run the development server:
+## Overview
+
+Planning travel can often feel overwhelming, especially for students balancing cost, convenience, and flexibility. TravelEase was created to simplify this process by providing a clean interface and intuitive structure for exploring travel options.
+
+## Features
+
+- Browse travel options in a clear, user-friendly interface  
+- Structured layout for exploring destinations and trip details  
+- Responsive design focused on usability and accessibility  
+- Organized component-based frontend architecture  
+
+## Tech Stack
+
+- Next.js  
+- JavaScript  
+- CSS  
+
+## Contributions
+
+This was a collaborative group project where both team members contributed across the design and development of the application.
+
+Work included building the frontend using Next.js, organizing reusable components, and designing a user experience that prioritizes simplicity, accessibility, and ease of navigation.
+
+## Design Prototype
+
+An interactive Figma prototype was developed to map user flows and explore the overall user experience of the application.
+
+[View Figma Prototype](https://www.figma.com/proto/kybLmDENAiG1uJUA0By3Gz/Wireframes?node-id=1-2&p=f&t=FJBm2qHM57HIDiXU-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2)
+
+## Presentation
+
+A presentation was created to communicate the project’s goals, user experience decisions, and overall approach to solving the problem.
+
+[View Project Presentation](https://canva.link/5akbzhzpamhukam)
+
+## Notes
+
+The initial plan included integrating external travel APIs to provide real-time data. Due to limitations in finding reliable and accessible APIs, structured mock data was used to simulate real-world scenarios and support development.
+
+## What Was Learned
+
+- Structuring a frontend application using Next.js  
+- Designing interfaces with a focus on accessibility and usability  
+- Organizing reusable components for scalability  
+- Adapting project scope based on technical constraints  
+- Collaborating effectively in a team environment  
+
+## Running the Project Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
